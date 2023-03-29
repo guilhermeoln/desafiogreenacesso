@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.11",
     "axios": "^1.3.4",
     "context-api": "^0.0.2",
+    "netlify-cli": "^13.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",

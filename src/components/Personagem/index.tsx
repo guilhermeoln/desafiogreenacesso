@@ -1,6 +1,6 @@
 import IPersonagem from "../../types/IPersonagem";
 import { Botao, Container, Origem, Logo, Nome, Status, Texto } from "./styles";
-import { AiFillHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineStar } from "react-icons/ai";
 import { GiCrucifix } from "react-icons/gi";
 import { RiEarthFill } from "react-icons/ri";
 
@@ -11,6 +11,7 @@ export default function Personagem(props: IPersonagem) {
     <Container>
       <Logo src={image} alt={name} />
       <Nome>{name}</Nome>
+      <AiOutlineStar cursor="pointer" />
       {status === "Alive" ? (
         <Status>
           <AiFillHeart /> {status}

@@ -9,6 +9,10 @@ export const Container = styled.div`
   padding: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 8px;
+
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 
 export const Logo = styled.img`
@@ -21,7 +25,7 @@ export const Logo = styled.img`
 export const Nome = styled.h1`
   font-size: 18px;
   text-align: center;
-  margin-top: 20px;
+  padding: 10px 0px;
 `;
 
 export const Status = styled.div`
