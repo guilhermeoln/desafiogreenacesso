@@ -1,16 +1,13 @@
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
-
-type MyState = {
-  personagens: string[];
-};
+import { usePersonagens } from "../../context/hooks/usePersonagens";
 
 export default function Home() {
-  const personagens = useSelector((state: MyState) => state.personagens);
+  const { personagens, setPersonagens } = usePersonagens();
 
-  useEffect(() => {
-    console.log(personagens);
-  }, []);
-
-  return <>oi</>;
+  return (
+    <>
+      {personagens.map((personagem) => (
+        <p>{personagem.name}</p>
+      ))}
+    </>
+  );
 }
