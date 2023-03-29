@@ -14,11 +14,12 @@ export default interface IPersonagem {
   status: string;
   species: string;
   type: string;
-  genter: string;
+  gender: string;
   origin: origin;
   location: location;
   image: string;
   episode: string[];
   url: string;
   created: string;
+  favorito?: boolean;
 }
