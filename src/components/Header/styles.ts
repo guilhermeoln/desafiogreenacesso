@@ -25,3 +25,21 @@ export const Botao = styled.button`
   cursor: pointer;
   margin-right: 30px;
 `;
+
+export const Favoritos = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const ContadorFavoritos = styled.h3`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${corPrimaria};
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  margin: -10px 0px 0px 50px;
+`;

@@ -1,17 +1,32 @@
 import IPersonagem from "../../types/IPersonagem";
 import { Botao, Container, Origem, Logo, Nome, Status, Texto } from "./styles";
-import { AiFillHeart, AiOutlineStar } from "react-icons/ai";
+import { AiFillHeart, AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { GiCrucifix } from "react-icons/gi";
 import { RiEarthFill } from "react-icons/ri";
+import { useFavoritos } from "../../context/hooks/useFavoritos";
 
 export default function Personagem(props: IPersonagem) {
   const { id, image, name, status, favorito, gender, origin, location } = props;
+
+  const { favoritos, adicionarFavorito, removerFavorito } = useFavoritos();
+
+  const personagemFavorito = favoritos.find(
+    (personagemFavoritado) => personagemFavoritado.id === id
+  );
 
   return (
     <Container>
       <Logo src={image} alt={name} />
       <Nome>{name}</Nome>
-      <AiOutlineStar cursor="pointer" />
+      {personagemFavorito ? (
+        <AiFillStar cursor="pointer" onClick={() => removerFavorito(props)} />
+      ) : (
+        <AiOutlineStar
+          cursor="pointer"
+          onClick={() => adicionarFavorito(props)}
+        />
+      )}
+
       {status === "Alive" ? (
         <Status>
           <AiFillHeart /> {status}
