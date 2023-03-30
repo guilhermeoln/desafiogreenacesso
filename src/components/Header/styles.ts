@@ -47,8 +47,30 @@ export const ContadorFavoritos = styled.h3`
 
 export const Input = styled.input`
   width: 250px;
+  height: 15px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 8px 0px 0px 8px;
+
+  @media (max-width: 600px) {
+    width: 100px;
+  }
+`;
+
+export const Pesquisa = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 15px;
+  padding: 10px;
+  background-color: ${corSecundaria};
+  border-radius: 0px 8px 8px 0px;
 `;

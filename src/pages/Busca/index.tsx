@@ -1,24 +1,30 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Personagem from "../../components/Personagem";
 import { usePersonagens } from "../../context/hooks/usePersonagens";
-import { Botao, Container, Conteudo, Paginacao } from "./styles";
-import { useEffect } from "react";
+import { Botao, Container, Conteudo, Paginacao, Titulo } from "./styles";
 
-export default function Home() {
+export default function Busca() {
+  const { nome } = useParams();
+
   const {
+    filtrarPersonagens,
     personagens,
     paginaAnterior,
     proximaPagina,
-    passarPagina,
     voltarPagina,
-    carregarPersonagens,
+    passarPagina,
   } = usePersonagens();
 
-  useEffect(() => {
-    carregarPersonagens();
-  }, []);
+  useEffect(() => {}, []);
+
+  if (nome) {
+    filtrarPersonagens(nome);
+  }
 
   return (
     <Container>
+      <Titulo>Resultados da pesquisa:</Titulo>
       <Conteudo>
         {personagens.map((personagem) => (
           <Personagem key={personagem.id} {...personagem} />

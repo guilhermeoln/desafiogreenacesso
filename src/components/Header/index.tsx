@@ -5,16 +5,19 @@ import {
   Favoritos,
   ContadorFavoritos,
   Input,
+  Pesquisa,
+  Icon,
 } from "./styles";
 import logo from "../../assets/logo.png";
 import { useFavoritos } from "../../context/hooks/useFavoritos";
 import { useNavigate } from "react-router-dom";
 import { usePersonagens } from "../../context/hooks/usePersonagens";
 import { useState } from "react";
+import { AiOutlineSearch } from "react-icons/ai";
+import { corPrimaria, corSecundaria } from "../../styles/variaveis";
 
 export default function Header() {
   const { favoritos } = useFavoritos();
-  const { filtrarPersonagens } = usePersonagens();
   const navigate = useNavigate();
 
   const [nomePersonagem, setNomePersonagem] = useState("");
@@ -22,13 +25,25 @@ export default function Header() {
   return (
     <HeaderStyled>
       <Logo src={logo} onClick={() => navigate("/")} />
-      <Input
-        type="text"
-        placeholder="Pesquise aqui"
-        value={nomePersonagem}
-        onChange={(event) => setNomePersonagem(event.target.value)}
-        onBlur={() => filtrarPersonagens(nomePersonagem)}
-      />
+      <Pesquisa>
+        <Input
+          type="text"
+          placeholder="Pesquise aqui"
+          value={nomePersonagem}
+          onChange={(event) => setNomePersonagem(event.target.value)}
+        />
+        <Icon>
+          <AiOutlineSearch
+            fontSize="20px"
+            color={corPrimaria}
+            cursor="pointer"
+            onClick={() => {
+              navigate(`/search/${nomePersonagem}`);
+              setNomePersonagem("");
+            }}
+          />
+        </Icon>
+      </Pesquisa>
       <Favoritos>
         <Botao onClick={() => navigate("/favoritos")}>Favoritos</Botao>
         <ContadorFavoritos>{favoritos.length}</ContadorFavoritos>

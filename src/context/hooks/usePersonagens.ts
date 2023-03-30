@@ -11,6 +11,7 @@ export const usePersonagens = () => {
     setProximaPagina,
     paginaAnterior,
     setPaginaAnterior,
+    carregarPersonagens,
   } = useContext(PersonagensContext);
 
   async function passarPagina() {
@@ -62,5 +63,6 @@ export const usePersonagens = () => {
     passarPagina,
     voltarPagina,
     filtrarPersonagens,
+    carregarPersonagens,
   };
 };

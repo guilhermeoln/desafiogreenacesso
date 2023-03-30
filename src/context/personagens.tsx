@@ -13,6 +13,7 @@ interface IPropsContext {
   setProximaPagina: React.Dispatch<React.SetStateAction<string>>;
   paginaAnterior: string;
   setPaginaAnterior: React.Dispatch<React.SetStateAction<string>>;
+  carregarPersonagens: () => void;
 }
 
 export const PersonagensContext = createContext<IPropsContext>(null!);
@@ -22,20 +23,20 @@ export const PersonagensProvider = ({ children }: IProps) => {
   const [proximaPagina, setProximaPagina] = useState("");
   const [paginaAnterior, setPaginaAnterior] = useState("");
 
-  useEffect(() => {
-    async function carregarPersonagens() {
-      await api
-        .get("/character")
-        .then((response) => {
-          setPersonagens(response.data.results);
-          setPaginaAnterior(response.data.info.prev);
-          setProximaPagina(response.data.info.next);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+  const carregarPersonagens = async () => {
+    await api
+      .get("/character/?page=1")
+      .then((response) => {
+        setPersonagens(response.data.results);
+        setPaginaAnterior(response.data.info.prev);
+        setProximaPagina(response.data.info.next);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
+  useEffect(() => {
     carregarPersonagens();
   }, []);
 
@@ -48,6 +49,7 @@ export const PersonagensProvider = ({ children }: IProps) => {
         setPaginaAnterior,
         proximaPagina,
         setProximaPagina,
+        carregarPersonagens,
       }}
     >
       {children}
