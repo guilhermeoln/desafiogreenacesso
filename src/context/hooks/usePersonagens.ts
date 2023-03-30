@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useContext } from "react";
+import api from "../../services/api";
 import { PersonagensContext } from "../personagens";
 
 export const usePersonagens = () => {
@@ -38,6 +39,19 @@ export const usePersonagens = () => {
       });
   }
 
+  async function filtrarPersonagens(nomePersonagem: string) {
+    await api
+      .get(`/character/?name=${nomePersonagem}`)
+      .then((response) => {
+        setPersonagens(response.data.results);
+        setPaginaAnterior(response.data.info.prev);
+        setProximaPagina(response.data.info.next);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return {
     personagens,
     setPersonagens,
@@ -47,5 +61,6 @@ export const usePersonagens = () => {
     setPaginaAnterior,
     passarPagina,
     voltarPagina,
+    filtrarPersonagens,
   };
 };

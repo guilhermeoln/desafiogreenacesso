@@ -44,3 +44,11 @@ export const ContadorFavoritos = styled.h3`
   border-radius: 50%;
   margin: -10px 0px 0px 50px;
 `;
+
+export const Input = styled.input`
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+`;
