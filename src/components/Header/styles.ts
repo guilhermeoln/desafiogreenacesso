@@ -8,6 +8,13 @@ export const HeaderStyled = styled.header`
   align-items: center;
   justify-content: space-between;
   background-color: ${corPrimaria};
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 210px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -25,6 +32,10 @@ export const Botao = styled.button`
   font-weight: 400;
   cursor: pointer;
   margin-right: 30px;
+
+  @media (max-width: 600px) {
+    margin-right: 0px;
+  }
 `;
 
 export const Favoritos = styled.div`
@@ -54,7 +65,7 @@ export const Input = styled.input`
   border-radius: 8px 0px 0px 8px;
 
   @media (max-width: 600px) {
-    width: 100px;
+    width: 150px;
   }
 `;
 

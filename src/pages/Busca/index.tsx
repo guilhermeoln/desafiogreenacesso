@@ -16,11 +16,11 @@ export default function Busca() {
     passarPagina,
   } = usePersonagens();
 
-  useEffect(() => {}, []);
-
-  if (nome) {
-    filtrarPersonagens(nome);
-  }
+  useEffect(() => {
+    if (nome) {
+      filtrarPersonagens(nome);
+    }
+  }, []);
 
   return (
     <Container>
