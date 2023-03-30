@@ -13,6 +13,7 @@ export const HeaderStyled = styled.header`
 export const Logo = styled.img`
   width: 140px;
   height: 70px;
+  cursor: pointer;
 `;
 
 export const Botao = styled.button`
