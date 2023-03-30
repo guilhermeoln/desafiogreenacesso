@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 100px 0px;
+  padding: 50px 0px;
 `;
 
 export const Conteudo = styled.div`
@@ -15,6 +15,7 @@ export const Conteudo = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 50px;
   grid-row-gap: 100px;
+  margin-top: 100px;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr 1fr;

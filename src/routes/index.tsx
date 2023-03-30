@@ -4,6 +4,7 @@ import { FavoritosProvider } from "../context/favoritos";
 import { PersonagensProvider } from "../context/personagens";
 import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
 
 export default function RoutesApp() {
   return (
@@ -14,6 +15,7 @@ export default function RoutesApp() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </FavoritosProvider>
       </PersonagensProvider>
