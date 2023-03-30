@@ -1,8 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Personagem from "../../components/Personagem";
 import { usePersonagens } from "../../context/hooks/usePersonagens";
-import { Botao, Container, Conteudo, Paginacao, Titulo } from "./styles";
+import {
+  Botao,
+  Container,
+  Conteudo,
+  PaginaAtual,
+  Paginacao,
+  Titulo,
+} from "./styles";
 
 export default function Busca() {
   const { nome } = useParams();
@@ -22,6 +29,8 @@ export default function Busca() {
     }
   }, []);
 
+  const [paginaAtual, setPaginaAtual] = useState(1);
+
   return (
     <Container>
       <Titulo>Resultados da pesquisa:</Titulo>
@@ -31,10 +40,23 @@ export default function Busca() {
         ))}
       </Conteudo>
       <Paginacao>
-        <Botao disabled={!paginaAnterior} onClick={voltarPagina}>
+        <Botao
+          disabled={!paginaAnterior}
+          onClick={() => {
+            voltarPagina();
+            setPaginaAtual(paginaAtual - 1);
+          }}
+        >
           Voltar
         </Botao>
-        <Botao disabled={!proximaPagina} onClick={passarPagina}>
+        <PaginaAtual>{paginaAtual}</PaginaAtual>
+        <Botao
+          disabled={!proximaPagina}
+          onClick={() => {
+            passarPagina();
+            setPaginaAtual(paginaAtual + 1);
+          }}
+        >
           Próxima
         </Botao>
       </Paginacao>

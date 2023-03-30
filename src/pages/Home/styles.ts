@@ -33,6 +33,7 @@ export const Paginacao = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
   margin-top: 80px;
 `;
 
@@ -41,7 +42,18 @@ export const Botao = styled.button`
   border: none;
   background-color: ${(props) => (props.disabled ? "#CED0CE" : corPrimaria)};
   color: white;
-  margin-left: 30px;
   cursor: pointer;
   border-radius: 8px;
+`;
+
+export const PaginaAtual = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: ${corPrimaria};
+  color: white;
+  border-radius: 50%;
+  margin: 0px 10px 0px 10px;
 `;
