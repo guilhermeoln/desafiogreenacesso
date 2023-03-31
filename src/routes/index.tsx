@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../components/Header";
 import { FavoritosProvider } from "../context/favoritos";
 import { PersonagensProvider } from "../context/personagens";
-import Busca from "../pages/busca";
+import Busca from "../pages/Busca";
 import Detalhes from "../pages/detalhes";
 import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
