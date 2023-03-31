@@ -5,7 +5,7 @@ import { PersonagensProvider } from "../context/personagens";
 import Busca from "../pages/busca";
 import Detalhes from "../pages/detalhes";
 import Favoritos from "../pages/favoritos";
-import Home from "../pages/home";
+import Home from "../pages/Home";
 import NotFound from "../pages/notFound";
 
 export default function RoutesApp() {
