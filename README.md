@@ -21,7 +21,7 @@ Implantação:
 - Node
 - IDE para acessar o código
 
-Dar exemplos
+
 🔧 Instalação
 
 - Assim que clonar o repositório como foi ensinado a cima, você precisa instalar as dependências do projeto.
