@@ -4,9 +4,9 @@ import { FavoritosProvider } from "../context/favoritos";
 import { PersonagensProvider } from "../context/personagens";
 import Busca from "../pages/busca";
 import Detalhes from "../pages/detalhes";
-import Favoritos from "../pages/favoritos";
+import Favoritos from "../pages/Favoritos";
 import Home from "../pages/Home";
-import NotFound from "../pages/notFound";
+import NotFound from "../pages/NotFound";
 
 export default function RoutesApp() {
   return (
