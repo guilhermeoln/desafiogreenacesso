@@ -30,7 +30,6 @@ Implantação:
   3 - Assim que terminar de instalar as dependências seu projeto está pronto para ser inicializado.
   4 - Para inicializar o projeto digite "npm run start" no terminal;
 
-Diga como essa etapa será:
 
 🛠️ Construído com
 
