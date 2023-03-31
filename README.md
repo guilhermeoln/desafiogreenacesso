@@ -53,5 +53,5 @@ José Guilherme - https://github.com/guilhermeoln
 - Desfavoritar Personagem (Na estrelinha do card)
 - Seção de favoritos (Ao clicar no botão(Favoritos) que está no header)
 
-🎁 Expressões de gratidão
+🎁 Expressões de gratidão: 
 Diante mão quero agradecer pela oportunidade que ganhei para demonstrar um pouco do meu trabalho!
