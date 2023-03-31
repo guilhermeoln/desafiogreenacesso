@@ -21,7 +21,6 @@ Implantação:
 - Node
 - IDE para acessar o código
 
-
 🔧 Instalação
 
 - Assim que clonar o repositório como foi ensinado a cima, você precisa instalar as dependências do projeto.
@@ -29,7 +28,6 @@ Implantação:
   2 - digite o comando "npm i" no terminal
   3 - Assim que terminar de instalar as dependências seu projeto está pronto para ser inicializado.
   4 - Para inicializar o projeto digite "npm run start" no terminal;
-
 
 🛠️ Construído com
 
@@ -53,5 +51,5 @@ José Guilherme - https://github.com/guilhermeoln
 - Desfavoritar Personagem (Na estrelinha do card)
 - Seção de favoritos (Ao clicar no botão(Favoritos) que está no header)
 
-🎁 Expressões de gratidão: 
+🎁 Expressões de gratidão:
 Diante mão quero agradecer pela oportunidade que ganhei para demonstrar um pouco do meu trabalho!
