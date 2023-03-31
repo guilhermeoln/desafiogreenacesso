@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+Desafio Green Acesso
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desafio técnico para a Green acesso, em que consiste o desafio ?
 
-## Available Scripts
+- O projeto consiste em uma tela de listagem de personagens com busca e uma tela de detalhes que deve conter a maior quantidade possível de informações e uma opção para favoritar o personagem.
 
-In the project directory, you can run:
+🚀 Começando
+Para inicializar o projeto na sua máquina, primeiramente você terá que clonar o repositório:
+1- crie uma pasta na sua máquina.
+2- abra o terminal e acessa essa pasta criada.
+3- digite o seguinte comando no terminal:
 
-### `npm start`
+- git clone https://github.com/guilhermeoln/desafiogreenacesso.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+OBS: Você precisa ter o git instalado na sua máquina
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Implantação:
+📋 Pré-requisitos
 
-### `npm test`
+- GIT
+- Node
+- IDE para acessar o código
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dar exemplos
+🔧 Instalação
 
-### `npm run build`
+- Assim que clonar o repositório como foi ensinado a cima, você precisa instalar as dependências do projeto.
+  1 - entre na pasta que foi criada após o projeto ser clonado.
+  2 - digite o comando "npm i" no terminal
+  3 - Assim que terminar de instalar as dependências seu projeto está pronto para ser inicializado.
+  4 - Para inicializar o projeto digite "npm run start" no terminal;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Diga como essa etapa será:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🛠️ Construído com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJS
+- TypeScript
+- React-Router-Dom
+- Styled-Components
+- ContextAPI
+- React-icons
+- Axios
 
-### `npm run eject`
+✒️ Autores
+José Guilherme - https://github.com/guilhermeoln
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+🔧 Funcionalidades:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Listagem de Personagens
+- Detalhes de Personagens(Ao clicar no botão "Ver mais")
+- Campo de busca
+- Favoritar Personagem (Na estrelinha do card)
+- Desfavoritar Personagem (Na estrelinha do card)
+- Seção de favoritos (Ao clicar no botão(Favoritos) que está no header)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+🎁 Expressões de gratidão
+Diante mão quero agradecer pela oportunidade que ganhei para demonstrar um pouco do meu trabalho!

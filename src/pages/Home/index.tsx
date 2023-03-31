@@ -1,7 +1,7 @@
 import Personagem from "../../components/Personagem";
 import { usePersonagens } from "../../context/hooks/usePersonagens";
-import { Botao, Container, Conteudo, Paginacao } from "./styles";
-import { useEffect } from "react";
+import { Botao, Container, Conteudo, PaginaAtual, Paginacao } from "./styles";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const {
@@ -17,6 +17,8 @@ export default function Home() {
     carregarPersonagens();
   }, []);
 
+  const [paginaAtual, setPaginaAtual] = useState(1);
+
   return (
     <Container>
       <Conteudo>
@@ -25,10 +27,23 @@ export default function Home() {
         ))}
       </Conteudo>
       <Paginacao>
-        <Botao disabled={!paginaAnterior} onClick={voltarPagina}>
+        <Botao
+          disabled={!paginaAnterior}
+          onClick={() => {
+            voltarPagina();
+            setPaginaAtual(paginaAtual - 1);
+          }}
+        >
           Voltar
         </Botao>
-        <Botao disabled={!proximaPagina} onClick={passarPagina}>
+        <PaginaAtual>{paginaAtual}</PaginaAtual>
+        <Botao
+          disabled={!proximaPagina}
+          onClick={() => {
+            passarPagina();
+            setPaginaAtual(paginaAtual + 1);
+          }}
+        >
           Próxima
         </Botao>
       </Paginacao>
