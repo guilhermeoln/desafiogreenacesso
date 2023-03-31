@@ -32,15 +32,18 @@ export default function Header() {
           value={nomePersonagem}
           onChange={(event) => setNomePersonagem(event.target.value)}
         />
-        <Icon>
+        <Icon
+          onClick={() => {
+            if (nomePersonagem.length > 0) {
+              navigate(`/search/${nomePersonagem}`);
+              setNomePersonagem("");
+            }
+          }}
+        >
           <AiOutlineSearch
             fontSize="20px"
             color={corPrimaria}
             cursor="pointer"
-            onClick={() => {
-              navigate(`/search/${nomePersonagem}`);
-              setNomePersonagem("");
-            }}
           />
         </Icon>
       </Pesquisa>

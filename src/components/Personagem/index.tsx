@@ -4,11 +4,14 @@ import { AiFillHeart, AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { GiCrucifix } from "react-icons/gi";
 import { RiEarthFill } from "react-icons/ri";
 import { useFavoritos } from "../../context/hooks/useFavoritos";
+import { useNavigate } from "react-router-dom";
 
 export default function Personagem(props: IPersonagem) {
   const { id, image, name, status, favorito, gender, origin, location } = props;
 
   const { favoritos, adicionarFavorito, removerFavorito } = useFavoritos();
+
+  const navigate = useNavigate();
 
   const personagemFavorito = favoritos.find(
     (personagemFavoritado) => personagemFavoritado.id === id
@@ -41,7 +44,7 @@ export default function Personagem(props: IPersonagem) {
         <RiEarthFill />
         <Texto>{origin.name}</Texto>
       </Origem>
-      <Botao>Ver mais</Botao>
+      <Botao onClick={() => navigate(`/detalhes/${id}`)}>Ver mais</Botao>
     </Container>
   );
 }
